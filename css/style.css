@@ -1,0 +1,144 @@
+/*
+*** limpeza de formatação **
+*/
+
+*{
+    margin: 0; /**\* remove a margem padrão de todos os elementos (interno) */
+    padding: 0; /**\* remove o preenchimento padrão de todos os elementos (externo)*/
+
+}
+
+/* formatações genericas */
+
+body{
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #a3a3a3;
+}
+
+h1{ 
+    color:#000000;
+    font-size: 36px;
+}
+
+h2{ 
+    color:#2f00ff;
+}
+h3{ 
+    color:#fbfbff;
+    background: #CCCCCC;
+    padding: 5px;
+}
+
+
+
+/* sempre começar pela ordem do html */
+
+/* estilização do header */
+
+
+#header{
+    background-color: #063fa8;
+    padding: 15px;
+    text-align: center;
+}
+
+#logo, #menu{
+    padding: 10px;
+}
+
+#header a:link, #header a:visited{ /* pseudoclasses para estilizar o link em seus estados normal e visitado */
+    color: rgb(209, 209, 243);
+    padding: 8px 12px;
+}
+
+#header a:hover{ /* pseudoclasses para estilizar o link quando o mouse passar por cima */
+    color: rgb(72, 160, 238);
+    background:     #ffffff;
+    text-decoration: none;
+}
+
+.white{
+    color: #ffffff;
+}
+
+.black{
+    color: #000000;
+}
+
+/* estilização do conteúdo */
+
+#content{
+    width: 920px; /* largura fixa para o conteúdo */
+    margin: 0 auto; /* centraliza o conteúdo, 0 para cima e baixo e auto para os lados */
+    padding: 15px;
+}
+
+/* estilização dos posts */
+
+#posts{
+    width: 660px; /* largura fixa para os posts */
+    float: left; /* alinha os posts à esquerda, permitindo que outros elementos flutuem ao lado */
+}
+
+.post{ /* estilização individual de cada post */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    text-align: justify; /* alinha o texto dos posts de forma justificada */
+}
+
+.data-post{
+    font-size: 13px;
+    border-bottom: 1px solid #cccccc; /* adiciona uma linha abaixo da data para separar visualmente do conteúdo do post */
+    color: #888888;
+    margin-bottom: 10px;
+    display: block; /* exibe a data como um bloco separado */
+}
+.img-post{
+    width: 620px; /* faz a imagem ocupar toda a largura do post */
+    height: auto; /* mantém a proporção da imagem */
+    margin-bottom: 10px; /* adiciona um espaço abaixo da imagem para separar do texto */
+}
+/* Lado direito */
+
+#right-side{
+    width: 240px; /* largura fixa para o lado direito */
+    float: right; /* alinha o lado direito à direita, permitindo que os posts flutuem ao lado */
+}
+
+.content-right{
+    float: right right; /* alinha o conteúdo do lado direito à direita, permitindo que outros elementos flutuem ao lado */
+    background: #FFFFFF;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+.post-right{
+    font-size: 13px;
+    padding: 5px;
+    margin-bottom: 1px dotted #000000; /* adiciona uma linha pontilhada abaixo de cada post para separar visualmente os posts */
+}
+
+/* estilização dos links */
+
+a{ /* estilização geral para todos os links */
+    text-decoration: none;
+}
+a:link, a:visited{ /* pseudoclasses para estilizar o link em seus estados normal e visitado */
+    color: #063fa8;
+}
+a:hover{
+    color: #063fa8; /* mantém a cor do link ao passar o mouse por cima */
+    text-decoration: underline;
+}
+
+/* estilização do rodapé */
+
+#footer{
+    clear:both; /* limpa os floats para garantir que o rodapé fique abaixo de todos os elementos flutuantes */
+    text-align: center;
+    padding: 10px;
+    background: #ffffff;
+    color:#063fa8
+}
