@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #f8fafc;
+    background: #f1f5f9;
     color: #1e293b;
 }
 
@@ -17,13 +17,14 @@ body {
     top: 0;
     z-index: 10;
 
-    background: #353434;
-    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     padding: 20px 40px;
 
-    display: flex;
-    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 /* LOGO */
@@ -40,7 +41,7 @@ body {
     color: #0f172a;
 }
 
-/* MENU CENTRALIZADO */
+/* MENU CENTRAL */
 #menu {
     position: absolute;
     left: 50%;
@@ -50,11 +51,11 @@ body {
 #menu a {
     margin: 0 20px;
     text-decoration: none;
-    color: #7b889b;
+    color: #64748b;
     font-size: 15px;
     font-weight: 500;
-    transition: 0.3s;
     position: relative;
+    transition: 0.3s;
 }
 
 #menu a::after {
@@ -78,10 +79,11 @@ body {
 
 /* CONTAINER */
 #content {
-    width: 1100px;
+    max-width: 1100px;
     margin: 40px auto;
     display: flex;
     gap: 30px;
+    padding: 0 15px;
 }
 
 /* POSTS */
@@ -89,20 +91,19 @@ body {
     flex: 2;
 }
 
-/* CARD */
+/* CARD POST */
 .post {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     padding: 25px;
     border-radius: 12px;
-    margin-bottom: 30px;
-
-    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    transition: all 0.25s ease;
 }
 
 .post:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 /* TITULO */
@@ -128,7 +129,7 @@ body {
 
 /* TEXTO */
 .post p {
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 10px;
 }
 
@@ -148,7 +149,7 @@ body {
     flex: 1;
 }
 
-/* BOX SIDEBAR */
+/* CAIXAS LATERAIS */
 .content-right {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -191,7 +192,7 @@ body {
     display: block;
     color: #64748b;
     text-decoration: none;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .content-right a:hover {
@@ -209,20 +210,65 @@ body {
     font-size: 14px;
 }
 
-/* RESPONSIVO */
-@media (max-width: 900px) {
+/* =========================
+   RESPONSIVO
+========================= */
+
+/* tablet */
+@media (max-width: 1024px) {
     #content {
         flex-direction: column;
-        width: 90%;
+    }
+}
+
+/* celular */
+@media (max-width: 768px) {
+
+    #header {
+        flex-direction: column;
+        gap: 10px;
     }
 
     #menu {
         position: static;
         transform: none;
-        margin-top: 10px;
     }
 
-    #header {
-        flex-direction: column;
+    #menu a {
+        margin: 0 10px;
     }
+
+    #content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #posts,
+    #right-side {
+        width: 100%;
+    }
+
+}
+
+/* celular pequeno */
+@media (max-width: 480px) {
+
+    #menu a {
+        display: block;
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    #logo h1 {
+        font-size: 22px;
+    }
+
+    .post {
+        padding: 18px;
+    }
+
+    .post h2 {
+        font-size: 18px;
+    }
+
 }
