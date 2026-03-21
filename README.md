@@ -1,29 +1,76 @@
-# Personal Blog Portfolio Website
+# 🌐 Portfolio Website
 
-Welcome to my personal blog portfolio website, built with HTML and CSS. This website serves as a showcase for my work and a platform for sharing my thoughts and experiences.
+A personal portfolio website built with HTML and CSS as part of my learning journey in web development.
 
-## Pages
-- **Home**: The landing page that welcomes visitors with an overview of my portfolio and blog.
-- **Sobre**: A page dedicated to sharing more about myself, my background, and my journey in the web development world.
-- **Portfólio**: A dedicated section showcasing my projects, complete with descriptions and links.
+## 🚀 Live Demo
 
-## Features
-- **Responsive Design**: The website is fully responsive, ensuring optimal viewing experience across a variety of devices, from desktops to mobile phones.
-- **Blog Posts**: A section for sharing articles and insights related to my interests and expertise.
-- **Sidebar**: A convenient sidebar that includes links to recent posts and categories to help visitors navigate my blog easily.
+👉 https://aresmatheus97-gif.github.io/site-portfolio/
 
-## File Structure
-The file structure of the website is organized as follows:
+## 🛠️ Technologies Used
+
+* HTML5
+* CSS3
+
+## 📂 Project Structure
+
 ```
 /
-├── index.html               # Home page
-├── sobre.html               # About me page
-├── portfolio.html           # Portfolio page
+├── index.html              # Home page with introduction and recent posts
+├── pages/
+│   ├── sobre.html         # About me page with personal information
+│   ├── portfolio.html     # Portfolio page showcasing my projects
+│   └── progpy.html        # Detailed post about Python project
 ├── css/
-│   ├── styles.css          # Main stylesheet for styling the website
-├── js/
-│   └── scripts.js          # Optional JavaScript for added interactivity
-└── images/                 # Directory for images used in the website
+│   └── style.css          # Main stylesheet with responsive design
+└── imagens/               # Directory containing project images
+    ├── eu.png
+    ├── tecnologia01.png
+    ├── tecnologia02.png
+    └── progpy.png
 ```
 
-Feel free to explore and enjoy the content. Thank you for visiting my personal blog portfolio!
+## 📋 Features
+
+* **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
+* **Blog-style Layout** - Home page with featured posts and sidebar
+* **Multi-page Structure** - Home, About, and Portfolio sections
+* **Recent Posts Sidebar** - Quick access to latest content
+* **Categories Section** - Organized navigation by topic
+* **Modern Styling** - Clean, professional design with smooth hover effects
+
+## ⚙️ How to Run Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/aresmatheus97-gif/site-portfolio.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd site-portfolio
+```
+
+3. Open `index.html` in your browser to view the website
+
+## 📝 Project Status
+
+This project is **under active development**. I'm continuously learning and improving both the design and content as I progress in my web development journey.
+
+## 🎯 Planned Improvements
+
+* Add JavaScript for interactive features
+* Implement contact form
+* Improve SEO optimization
+* Add dark mode toggle
+* Expand portfolio with more projects
+
+## 👨‍💻 Author
+
+**Matheus Pavan** - Currently transitioning to tech with a focus on full-stack development
+
+* Portfolio: https://aresmatheus97-gif.github.io/site-portfolio/
+* GitHub: https://github.com/aresmatheus97-gif
+
+## 📄 License
+
+This project is open source and available under the MIT License.
