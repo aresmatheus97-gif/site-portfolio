@@ -1,144 +1,228 @@
-/*
-*** limpeza de formatação **
-*/
-
-*{
-    margin: 0; /**\* remove a margem padrão de todos os elementos (interno) */
-    padding: 0; /**\* remove o preenchimento padrão de todos os elementos (externo)*/
-
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* formatações genericas */
-
-body{
-    font-size: 16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #a3a3a3;
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
 }
 
-h1{ 
-    color:#000000;
-    font-size: 36px;
+/* HEADER */
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background: #353434;
+    border-bottom: 1px solid #e2e8f0;
+
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
 }
 
-h2{ 
-    color:#2f00ff;
-}
-h3{ 
-    color:#fbfbff;
-    background: #CCCCCC;
-    padding: 5px;
+/* LOGO */
+#logo h1 {
+    font-size: 26px;
+    font-weight: 600;
 }
 
-
-
-/* sempre começar pela ordem do html */
-
-/* estilização do header */
-
-
-#header{
-    background-color: #063fa8;
-    padding: 15px;
-    text-align: center;
+.white {
+    color: #2563eb;
 }
 
-#logo, #menu{
-    padding: 10px;
+.black {
+    color: #0f172a;
 }
 
-#header a:link, #header a:visited{ /* pseudoclasses para estilizar o link em seus estados normal e visitado */
-    color: rgb(209, 209, 243);
-    padding: 8px 12px;
+/* MENU CENTRALIZADO */
+#menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#header a:hover{ /* pseudoclasses para estilizar o link quando o mouse passar por cima */
-    color: rgb(72, 160, 238);
-    background:     #ffffff;
+#menu a {
+    margin: 0 20px;
     text-decoration: none;
+    color: #7b889b;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
 }
 
-.white{
-    color: #ffffff;
+#menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #2563eb;
+    transition: 0.3s;
 }
 
-.black{
-    color: #000000;
+#menu a:hover {
+    color: #2563eb;
 }
 
-/* estilização do conteúdo */
-
-#content{
-    width: 920px; /* largura fixa para o conteúdo */
-    margin: 0 auto; /* centraliza o conteúdo, 0 para cima e baixo e auto para os lados */
-    padding: 15px;
+#menu a:hover::after {
+    width: 100%;
 }
 
-/* estilização dos posts */
-
-#posts{
-    width: 660px; /* largura fixa para os posts */
-    float: left; /* alinha os posts à esquerda, permitindo que outros elementos flutuem ao lado */
+/* CONTAINER */
+#content {
+    width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
 }
 
-.post{ /* estilização individual de cada post */
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
-    text-align: justify; /* alinha o texto dos posts de forma justificada */
+/* POSTS */
+#posts {
+    flex: 2;
 }
 
-.data-post{
-    font-size: 13px;
-    border-bottom: 1px solid #cccccc; /* adiciona uma linha abaixo da data para separar visualmente do conteúdo do post */
-    color: #888888;
+/* CARD */
+.post {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+
+    transition: all 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* TITULO */
+.post h2 {
+    color: #2563eb;
     margin-bottom: 10px;
-    display: block; /* exibe a data como um bloco separado */
-}
-.img-post{
-    width: 620px; /* faz a imagem ocupar toda a largura do post */
-    height: auto; /* mantém a proporção da imagem */
-    margin-bottom: 10px; /* adiciona um espaço abaixo da imagem para separar do texto */
-}
-/* Lado direito */
-
-#right-side{
-    width: 240px; /* largura fixa para o lado direito */
-    float: right; /* alinha o lado direito à direita, permitindo que os posts flutuem ao lado */
 }
 
-.content-right{
-    float: right right; /* alinha o conteúdo do lado direito à direita, permitindo que outros elementos flutuem ao lado */
-    background: #FFFFFF;
-    padding: 10px;
-    margin-bottom: 20px;
-
-}
-.post-right{
-    font-size: 13px;
-    padding: 5px;
-    margin-bottom: 1px dotted #000000; /* adiciona uma linha pontilhada abaixo de cada post para separar visualmente os posts */
+/* DATA */
+.data-post {
+    font-size: 12px;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 15px;
 }
 
-/* estilização dos links */
+/* IMAGEM */
+.img-post {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
 
-a{ /* estilização geral para todos os links */
+/* TEXTO */
+.post p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* LINK */
+.post a {
+    color: #2563eb;
     text-decoration: none;
+    font-weight: 500;
 }
-a:link, a:visited{ /* pseudoclasses para estilizar o link em seus estados normal e visitado */
-    color: #063fa8;
-}
-a:hover{
-    color: #063fa8; /* mantém a cor do link ao passar o mouse por cima */
+
+.post a:hover {
     text-decoration: underline;
 }
 
-/* estilização do rodapé */
+/* SIDEBAR */
+#right-side {
+    flex: 1;
+}
 
-#footer{
-    clear:both; /* limpa os floats para garantir que o rodapé fique abaixo de todos os elementos flutuantes */
-    text-align: center;
-    padding: 10px;
+/* BOX SIDEBAR */
+.content-right {
     background: #ffffff;
-    color:#063fa8
+    border: 1px solid #e2e8f0;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* TITULO SIDEBAR */
+.content-right h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #2563eb;
+}
+
+/* POSTS LATERAIS */
+.post-right {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.post-right p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.post-right a {
+    font-size: 13px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.post-right a:hover {
+    text-decoration: underline;
+}
+
+/* LINKS SIDEBAR */
+.content-right a {
+    display: block;
+    color: #64748b;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.content-right a:hover {
+    color: #2563eb;
+}
+
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    #content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #menu {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    #header {
+        flex-direction: column;
+    }
 }
