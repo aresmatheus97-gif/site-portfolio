@@ -50,7 +50,7 @@ git clone https://github.com/aresmatheus97-gif/site-portfolio.git
 cd site-portfolio
 ```
 
-3. Open `index.html` in your browser to view the website
+3. Open `index.html`, open live server in your IDE to view the website
 
 ## 📝 Project Status
 
@@ -73,4 +73,4 @@ This project is **under active development**. I'm continuously learning and impr
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+This project is open source, feel free to use
