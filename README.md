@@ -17,6 +17,7 @@ A personal portfolio website built with HTML and CSS as part of my learning jour
 * Multi-page structure
 * Basic navigation system
 * Styled layout with CSS
+* Responsive design (mobile support)
 
 ## ⚠️ Project Status
 
@@ -24,9 +25,8 @@ This project is **still under development** and will be continuously updated as 
 
 ## 📈 Future Improvements
 
-* Better design and layout
-* Responsive design (mobile support)
-* Improved navigation
+* Better design and layout (done)
+* Improved navigation (done)
 * Integration with backend (future)
 
 ## ▶️ How to Run Locally
